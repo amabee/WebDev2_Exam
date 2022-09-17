@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Here</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="javascript" href="js/vanilla.js">
+</head>
+<body>
+  
+    <section>
+        <img src="assets/1.png" class="layer" value = "5">
+        <img src="assets/2.png" class="layer" value = "5">
+        <img src="assets/3.png" class="layer" value = "5">
+        <img src="assets/4.png" class="layer" value = "5">
+        <img src="assets/2.png" class="layer" value = "5">
+        <img src="assets/6.png" class="layer" value = "5">
+        <img src="assets/7.png" class="layer" value = "5">
+        <img src="assets/8.png" class="layer" value = "5">
+        <img src="assets/9.png" class="layer" value = "5">
+        <img src="assets/10.png" class="layer" value = "5">
+        <img src="assets/11.png" class="layer" value = "5">
+        <img src="assets/12.png" class="layer" value="5">
+        <a href=""><h2 class="layer" value="5" data-text="Start...">Start...</h2></a>
+      </section>
+    
+    <script>
+        document.addEventListener("mousemove", parallax);
+      function parallax(event) {
+        this.querySelectorAll(".layer").forEach((layer) => {
+          const position = layer.getAttribute("value");
+          const x = (window.innerWidth - event.pageX * position) / 100;
+          const y = (window.innerHeight - event.pageY * position) / 100;
+  
+          layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
+        });
+      }
+    </script>
+
+
+</body>
+</html>
